@@ -5,10 +5,11 @@ import communityRouter from './routes/communityPrompt.route.js'
 import exportRouter from './routes/export.route.js'
 import aiRouter from './routes/ai.route.js'
 import cookieParser from 'cookie-parser'
-import cors from 'cors'
+import path from 'path'
+
 import { fileURLToPath } from "url";
 
-// __dirname, __filename ko ES Module me manually banana padta hai
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
