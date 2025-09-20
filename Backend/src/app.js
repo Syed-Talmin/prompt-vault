@@ -5,6 +5,7 @@ import communityRouter from './routes/communityPrompt.route.js'
 import exportRouter from './routes/export.route.js'
 import aiRouter from './routes/ai.route.js'
 import cookieParser from 'cookie-parser'
+import cors from 'cors'
 import path from "path";
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -17,6 +18,12 @@ const app = express()
 app.use(express.json())
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, "../public")));
+app.use(cors(
+  {
+    origin: "http://localhost:5173",
+    credentials: true
+  }
+))
 
 app.use("/api/user",userRouter)
 app.use("/api/prompt",promptRouter)
