@@ -25,7 +25,7 @@ app.use("/api/community",communityRouter)
 app.use("/api/export",exportRouter)
 app.use("/api/ai",aiRouter)
 
-app.get("*", (req, res) => {
+app.get("*name", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
