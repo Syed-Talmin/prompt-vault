@@ -101,9 +101,9 @@ const PromptsHomePage = () => {
       )}
 
       <div
-        className={`absolute bottom-0 w-full ${
+        className={`absolute -bottom-5 w-full ${
           showComments ? "h-[90vh]" : "h-0"
-        } overflow-hidden transition-all duration-300 flex flex-col items-center bg-[#121212] text-white`}
+        } overflow-hidden transition-all rounded-lg duration-300 flex flex-col items-center bg-[#121212] text-white`}
       >
         {idForComments && (
           <Comments
