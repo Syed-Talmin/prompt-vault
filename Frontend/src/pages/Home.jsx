@@ -71,7 +71,7 @@ const PromptsHomePage = () => {
   };
 
   return (
-    <div className="bg-[#0A0A0A]  max-w-5xl mx-auto">
+    <div className="bg-[#0A0A0A] relative max-w-5xl mx-auto">
       {showDeletePromptModal && (
         <Popup>
           <div className="bg-[#121212] px-10 py-5 rounded-2xl ">
