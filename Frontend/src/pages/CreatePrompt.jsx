@@ -14,13 +14,13 @@ const CreatePrompt = () => {
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if(!title.trim() || !content.trim() || !tags.trim() || !categories.length){
+    if(!title.trim() || !content.trim() || !tags.trim() || !selectedCategory.trim()){
       toast.warn("Please fill all the fields");
       return;
     }
-    const formData = { title, content, tags, category:categories, isPublic };
+    const formData = { title, content, tags, category:selectedCategory, isPublic };
 
-    const res = await api.post("/prompt/create", formData);
+     await api.post("/prompt/create", formData);
     toast.success("Prompt created successfully");
     setTitle(""); 
     setContent("");
